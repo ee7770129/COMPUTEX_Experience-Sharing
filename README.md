@@ -1,8 +1,10 @@
 # COMPUTEX 2026 觀展心得分享
 
+[![線上展示 Live Demo](https://img.shields.io/badge/線上展示-Live%20Demo-3c78f0?style=for-the-badge)](https://ee7770129.github.io/COMPUTEX_Experience-Sharing/)
+
 > 把 2026/06/04 參加 COMPUTEX 的觀展心得，做成「全寬、垂直捲動、捲到即觸發動畫」的捲動式網頁簡報（scrollytelling）。
 
-🔗 **線上瀏覽**：https://ee7770129.github.io/COMPUTEX_Experience-Sharing/
+**線上瀏覽 / Live**：<https://ee7770129.github.io/COMPUTEX_Experience-Sharing/>
 
 > 個人觀展筆記，部分內容經現場即時翻譯整理，**僅供參考**，不代表各廠商官方立場；圖片版權屬原廠商所有。
 
