@@ -9,7 +9,7 @@ import VO from "../components/VO.jsx";
 import ShotBeat from "../components/ShotBeat.jsx";
 import Divider from "../components/Divider.jsx";
 
-const A = "/assets";
+const A = import.meta.env.BASE_URL + "assets"; // 配合 GitHub Pages 子路徑
 
 // 0｜章節分隔
 const D0 = () => (
