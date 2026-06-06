@@ -2,6 +2,15 @@
 
 本專案所有重要變更記錄於此。格式參考 Keep a Changelog，版本依語意化版本（SemVer）。
 
+## [1.0.1] - 2026-06-06
+
+### 調整（Changed）
+- 「回到頂端」浮動按鈕改為**桌機與手機皆顯示**（原僅手機），新增 hover 效果與桌機邊距。
+- README 置頂加入「線上展示 Live Demo」徽章與連結。
+
+### 部署（Deploy）
+- 線上版上線：https://ee7770129.github.io/COMPUTEX_Experience-Sharing/
+
 ## [1.0.0] - 2026-06-06
 
 ### 初版（Added）
