@@ -1,0 +1,56 @@
+/* 請以繁體中文產生程式碼註解。請務必保持 UTF-8 編碼。
+   功能說明：手機 / 窄螢幕響應式覆寫 — 強制多欄版面收合為單欄、調整尺寸與間距
+   單一職責：只處理 RWD 覆寫；用 !important 蓋過各元件 inline <style> 的較高權重
+   建立日期：2026-06-06  版本：v1.0
+   說明：各 beat 以 inline <style> + 通用 class（.sb-grid/.sb-big 等）撰寫，
+        桌機用 .sb-big .sb-grid（權重較高）做寬版，手機需用 !important 才能覆蓋。 */
+
+@media (max-width: 820px) {
+  /* 區塊內距收窄 */
+  .section { padding: clamp(72px, 12vh, 110px) 22px clamp(40px, 7vh, 72px); }
+
+  /* 所有左右並排 / 多欄 → 單欄堆疊 */
+  .sb-grid,
+  .sb-big .sb-grid,
+  .sb-cols,
+  .pillars,
+  .brief-points,
+  .flow {
+    grid-template-columns: 1fr !important;
+    gap: clamp(20px, 4vh, 32px) !important;
+  }
+
+  /* 兩個大數字並排 → 改直排 */
+  .stat-pair,
+  .stat-row {
+    flex-direction: column !important;
+    gap: var(--s4) !important;
+  }
+
+  /* 照片在單欄時佔滿寬 */
+  .sb-media .shot,
+  .sb-img .shot { width: 100% !important; }
+
+  /* 議程卡：手機維持 2 欄、字再縮一點 */
+  .cover-cards { grid-template-columns: 1fr 1fr !important; }
+  .cover-cards .card-title { min-height: 0 !important; }
+
+  /* 大數字與大標在手機略縮，避免換行過長 */
+  .stat-num { font-size: clamp(96px, 30vw, 150px) !important; }
+  .rule { font-size: clamp(60px, 17vw, 110px) !important; }
+
+  /* 結語主線箭頭在單欄時隱藏 */
+  .flow-arrow { display: none !important; }
+
+  /* 口白字幕在手機縮排 */
+  .vo { padding: var(--s3) !important; }
+
+  /* 頂部 chip 過長時截斷 */
+  .chip { max-width: 62vw; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+}
+
+/* 更窄（小手機）：議程卡也改單欄 */
+@media (max-width: 520px) {
+  .cover-cards { grid-template-columns: 1fr !important; }
+  .rule-legend { gap: 16px !important; }
+}

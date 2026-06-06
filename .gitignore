@@ -1,0 +1,16 @@
+# 相依套件與建置產物
+node_modules/
+dist/
+.vite/
+
+# 系統與編輯器
+.DS_Store
+Thumbs.db
+*.local
+.idea/
+.vscode/
+
+# 日誌
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

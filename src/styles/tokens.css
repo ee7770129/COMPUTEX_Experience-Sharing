@@ -1,0 +1,57 @@
+/* 請以繁體中文產生程式碼註解。請務必保持 UTF-8 編碼。
+   功能說明：設計系統變數（顏色 / 類型色 / 字級 / 間距 / 圓角 / 動效曲線）
+   單一職責：只定義 design tokens，不含任何版面或動畫實作
+   建立日期：2026-06-06  版本：v1.0 */
+
+:root {
+  /* 底色系：深藍夜（呼應現場舞台藍光，刻意偏藍而非純黑 / GitHub 暗色） */
+  --bg:        #070b16;
+  --bg-2:      #0b1224;
+  --bg-3:      #111a33;
+  --panel:     rgba(255, 255, 255, 0.04);
+  --panel-2:   rgba(255, 255, 255, 0.07);
+  --line:      rgba(255, 255, 255, 0.12);
+  --line-soft: rgba(255, 255, 255, 0.07);
+
+  /* 文字 */
+  --ink:     #eef2fb;
+  --ink-dim: #9aa7c2;
+  --ink-mut: #61708f;
+
+  /* 三大主題類型色（沿用 COMPUTEX 議程卡片配色） */
+  --c-data:     #f0b23a; /* 資料智能、治理與安全（黃）  Synology */
+  --c-genai:    #9b82e6; /* 生成式 AI 與智慧內容應用（紫）Cadence */
+  --c-industry: #e85c8a; /* 產業落地 AI 應用（粉）       Siemens / 研華 */
+  --c-brand:    #3c78f0; /* 全域品牌藍（封面 / 進度條） */
+
+  /* 目前章節 accent，由 engine 依章節覆寫 */
+  --accent: var(--c-brand);
+
+  /* 字體 */
+  --font-zh: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  --font-en: "Space Grotesk", var(--font-zh);
+
+  /* 字級（全寬捲動：以 clamp + vw 隨視窗縮放） */
+  --fs-mega:  clamp(140px, 16vw, 320px); /* 巨型統計數字 */
+  --fs-h1:    clamp(56px, 7vw, 116px);
+  --fs-h2:    clamp(38px, 4.6vw, 76px);
+  --fs-h3:    clamp(26px, 2.6vw, 42px);
+  --fs-lead:  clamp(20px, 2vw, 32px);
+  --fs-body:  clamp(17px, 1.5vw, 25px);
+  --fs-small: clamp(15px, 1.1vw, 20px);
+  --fs-label: clamp(14px, 1vw, 18px);
+
+  /* 間距系統（8pt grid） */
+  --s1: 8px;  --s2: 16px;  --s3: 24px;  --s4: 32px;
+  --s5: 48px; --s6: 64px;  --s7: 96px;  --s8: 128px;
+
+  /* 圓角 */
+  --r-s: 10px;
+  --r-m: 18px;
+  --r-l: 28px;
+
+  /* 動效曲線與時間 */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur: 0.7s;
+}

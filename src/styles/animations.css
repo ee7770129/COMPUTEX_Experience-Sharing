@@ -1,0 +1,35 @@
+/* 請以繁體中文產生程式碼註解。請務必保持 UTF-8 編碼。
+   功能說明：keyframes 與「捲入視窗才播放」的進場動畫
+   單一職責：只放動畫
+   建立日期：2026-06-06  版本：v3.0（捲動觸發） */
+
+/* 逐項揭露：預設隱藏，祖先 .section.is-in 出現時才播放（由 Reveal 設定 delay） */
+@keyframes revealUp {
+  from { opacity: 0; transform: translateY(40px); filter: blur(8px); }
+  to   { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+.r { opacity: 0; }
+.section.is-in .r { animation: revealUp 0.8s var(--ease) both; }
+
+/* 橫向滑入（封面議程卡用） */
+@keyframes revealRight { from { opacity: 0; transform: translateX(70px); } to { opacity: 1; transform: translateX(0); } }
+.rx { opacity: 0; }
+.section.is-in .rx { animation: revealRight 0.75s var(--ease) both; }
+
+/* 巨型數字底線生長 */
+@keyframes growLine { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+/* 光暈掃過（章節分隔用） */
+@keyframes sweep { from { transform: translateX(-120%); } to { transform: translateX(120%); } }
+
+/* 滑鼠滾輪提示 */
+@keyframes wheel { 0% { opacity: 1; top: 7px; } 100% { opacity: 0; top: 20px; } }
+
+/* 緩慢漂浮粒子（封面氛圍） */
+@keyframes drift { from { transform: translateY(0); } to { transform: translateY(-26px); } }
+
+/* 尊重減少動態偏好 */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .r, .section.is-in .r { animation: none !important; opacity: 1 !important; transform: none !important; filter: none !important; }
+}
