@@ -27,7 +27,7 @@ const B1 = () => (
     eyebrow="趨勢 · Unprecedented Demand for Custom Silicon"
     title="AI 推動半導體的三個地平線"
     shot={{ src: `${A}/cad-0612.jpg`, tag: "IMG_0612", caption: "半導體市場朝 $2.0T 前進，需求由三個 Horizon 驅動" }}
-    vo="Horizon 1（1–3 年）基礎設施 AI、Horizon 2（2–7 年）實體 AI、Horizon 3（5–10 年）科學 AI —— 每一層都需要更客製、更複雜的晶片，把半導體推向兩兆美元規模。"
+    vo="Horizon 1（1–3 年）基礎設施 AI、Horizon 2（2–7 年）實體 AI、Horizon 3（5–10+ 年）科學 AI —— 每一層都需要更客製、更複雜的晶片，把半導體推向兩兆美元規模。"
   />
 );
 
